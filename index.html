@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <h2>Library App</h2>
+    <button id="addBookButton">ADD BOOK</button>
+    <div id="inputModal">
+      <button id="closeFormButton">X</button>
+      <h2>Please enter the book's information</h2>
+      <form onsubmit="addBookToLibrary(event)" id="bookForm">
+        <label for="title">Book Title:</label><br />
+        <input type="text" id="title" name="title" class="input" /><br />
+        <label for="author">Author:</label><br />
+        <input type="text" id="author" name="author" class="input" /><br />
+        <label for="pages">How many pages have you read?:</label><br />
+        <input type="number" id="pages" name="pages" class="input" /><br />
+        <div id="radioButtons">
+          <label>
+            Have you read the book?
+            <div class="radioButton">
+              Yes
+              <input type="radio" class="radio" value="Read" name="radAnswer" />
+            </div>
+            <div class="radioButton">
+              No
+              <input
+                type="radio"
+                class="radio"
+                value="Not Read Yet"
+                name="radAnswer"
+              />
+            </div>
+          </label>
+        </div>
+        <button type="submit" id="submitButton">Submit</button>
+      </form>
+    </div>
+
+    <ul class="bookCards"></ul>
+    <div id="overlay"></div>
+    <script src="js/app.js" async defer></script>
+  </body>
+</html>
